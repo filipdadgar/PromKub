@@ -3,9 +3,9 @@ Prometheus with Grafana deployed on Kubernetes inspired by Giantswarm.
 
 # Installation
 
-1.git clone to directory.
-2.cd to directory 
-3.run kubectl create -f .
+1. git clone to directory.
+2. cd to directory 
+3. run kubectl create -f .
 
 # Troubleshooting
 kubectl delete namespace monitoring.
