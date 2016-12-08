@@ -1,5 +1,5 @@
 # PromKub
-Prometheus with Grafana deployed on Kubernetes inspired by Giantswarm.
+Prometheus with Grafana deployed on Kubernetes inspired by [Giantswarm](https://github.com/giantswarm/kubernetes-prometheus).
 
 # Installation
 
