@@ -8,7 +8,7 @@ Prometheus with Grafana deployed on Kubernetes inspired by Giantswarm.
 3. run kubectl create -f .
 
 # Troubleshooting
-kubectl delete namespace monitoring.
+kubectl delete namespace monitoring
 
 # Config 
 
