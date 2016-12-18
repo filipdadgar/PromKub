@@ -109,21 +109,34 @@ data:
             - 192.168.1.5
             - 192.168.1.11
             - 192.168.1.16
+            - 192.168.1.10
+            - 192.168.1.9
+            - 192.168.1.8
+        metrics_path: /snmp
         params:
           module: [default]
         relabel_configs:
           - source_labels: [__address__]
-            regex: (.*?)(:80)?
-            target_label: __param_address
-            replacement: ${1}
-          - source_labels: [__param_address]
-            regex: (.*)
+            target_label: __param_target
+          - source_labels: [__param_target]
             target_label: instance
-            replacement: ${1}
-          - source_labels: []
-            regex: .*
-            target_label: __address__
+          - target_label: __address__
             replacement: 10.98.204.226:9116  # SNMP exporter.
+#        params:
+#          module: [snmp]
+#        relabel_configs:
+#          - source_labels: [__address__]
+#            regex: (.*?)(:80)?
+#            target_label: __param_address
+#            replacement: ${1}
+#          - source_labels: [__param_address]
+#            regex: (.*)
+#            target_label: instance
+#            replacement: ${1}
+#          - source_labels: []
+#            regex: .*
+#            target_label: __address__
+#            replacement: 10.98.204.226:9116  # SNMP exporter.
 #            replacement: 10.108.111.41:9116  # SNMP exporter.
 kind: ConfigMap
 metadata:
